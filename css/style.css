@@ -1,0 +1,270 @@
+@font-face{
+    font-family: oswald;
+    src: url("../fonts/oswald/Oswald-SemiBold.ttf");
+}
+
+@font-face{
+    font-family: raleway;
+    src: url("../fonts/raleway/Raleway-Regular.ttf");
+}
+
+@media screen and (min-height: 1024px){
+    html{
+        font-size: small;
+    }
+}
+
+html{
+    font-size: medium;
+}
+
+body {
+    font-family: raleway;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/*---- barre de nav ----*/
+.barre {
+    overflow: hidden;
+    background-color: #264653;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.barre a {
+    float: left;
+    font-size: 16px;
+    color: #e76f51;
+    text-align: center;
+    padding: 16px 30px;
+    text-decoration: none;
+}
+
+.menuderoulant {
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.menuderoulant .menubtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #e76f51;
+    padding: 16px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.barre a:hover, .menuderoulant:hover .menubtn {
+    background-color: #e9c46a;
+    color: black;
+}
+
+.menuderoulant-content {
+    display: none;
+    position: absolute;
+    background-color: #264653;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.98);
+    z-index: 1;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.menuderoulant-content a {
+    float: none;
+    color: #e76f51;
+    padding: 12px 16px;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.menuderoulant-content a:hover {
+    background-color: #e9c46a;
+}
+
+.menuderoulant:hover .menuderoulant-content {
+    display: block;
+}
+
+/* ---- Titre ---*/
+
+header {
+    font-family: 'Arvo', serif;  /*typo*/
+    font-size: 80px;
+    font-weight: 40px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: oswald;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #e76f51;
+}
+
+#mainSecondTitle{
+    font-family: oswald;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #e76f51;
+    margin-top: 30px;
+    letter-spacing: 5px;
+}
+
+h3{
+    font-family: oswald;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e76f51;
+}
+/* --- Txt P d'accueil---*/
+#apropos{
+    margin-top: 100px;
+}
+
+p{
+    text-align: center;
+}
+
+/* ----Galerie ----*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-content: start;
+    max-width: 700px;
+    margin: 0 auto;
+    transition: all 150ms linear;
+}
+
+.gallery input[type="radio"] {
+    display: none;
+}
+
+.gallery label {
+    position: relative;
+    display: block;
+    padding-bottom: 60%;
+    margin: 5px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.gallery label:before {
+    border: 1px solid #ffffff;
+    content: '';
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    top: -5px;
+}
+
+.gallery img {
+    display: none;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    transition: all 150ms linear;
+}
+
+.gallery input[name="select"]:checked + label + img {
+    display: block;
+}
+
+.gallery input[name="select"]:checked + label:before {
+    border: 1px solid #000;
+}
+
+/*--- Page liens ---*/
+
+.principale {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 5% 0;
+}
+
+.logo img {
+    width: 350px;
+    height: 200px;
+}
+
+/* Formulaire */
+
+/* Voir sur la page de contact.php */
+
+/* Page Tuto choisie */
+
+#main{
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.boite .tuto{
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.boite .tuto h1{
+    text-transform: uppercase;
+}
+
+.boite .tuto p{
+    font-size: 1.3rem;
+    padding: 5px;
+    text-align: center;
+}
+.boite .tuto p a{
+    padding: 2px 5px;
+    font-size:1.3rem;
+    color:white;
+}
+.contenu .tuto p a:hover {
+    transition: 1s;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+/* Tuto perso */
+
+
+
+/* Espace admin*/
+
+.contenuadmin {
+    display: block;
+    margin: 0 auto;
+    background-color: #e9c46a;
+}
+
+/* Espace connexion*/
+/*
+.contenuadmin h6{
+    text-align: center;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+}*/
